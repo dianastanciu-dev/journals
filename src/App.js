@@ -12,9 +12,8 @@ function App() {
       <>
         <Navbar /> {/*Navbar pe toate paginile*/}
         <Routes>
-          <Route path="/" exact element={Home} />
-
-          <Route path="archives" element={Archives} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/archives" element={<Archives />} />
           {/*componenta Archives doar pe pagina Archives*/}
         </Routes>
       </>

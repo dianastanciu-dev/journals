@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 import { Button } from "./Button";
-import "./Button.css";
+import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+
+  const history = useNavigate();
 
   const handleClick = (event) => {
     event.stopPropagation();
@@ -61,9 +63,23 @@ function Navbar() {
             </li>
           </ul>
 
-          <Button buttonStyle="btn--outline" className="signupButton">
-            SIGN UP
-          </Button>
+          {/* replace this with link, unless it should look like a button */}
+
+          {/* Here we make an short if statement showing the button if the "button" state is true, and not doing anything if it's false.
+            This is short code for:
+            if (button) {
+              <Button ... />
+            }
+           */}
+          {button && (
+            <Button
+              buttonStyle="btn--outline"
+              className="signupButton"
+              onClick={() => history("/sign-up")}
+            >
+              SIGN UP
+            </Button>
+          )}
         </div>
       </nav>
     </div>
