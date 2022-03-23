@@ -4,9 +4,9 @@ import "./Button.css";
 
 // this component should be re-usable (meaning it should receive it's action on the "onClick" property, it should only contain styling)
 
-const STYLES = ["btn--primary", "btn--outline"]; //css classes
+const STYLES = ["btn--primary", "btn--outline", "btn-article"]; //css classes
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--small", "btn--medium", "btn--large"];
 
 export const Button = ({
   children,

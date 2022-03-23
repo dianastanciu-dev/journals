@@ -26,6 +26,18 @@
   border-radius: 2px;
 }
 
+.btn--article {
+  background-color: transparent;
+  color: #454536;
+  transition: all 0.3s ease-out;
+  border-radius: 2px;
+}
+
+.btn--small {
+  padding: 8px 20px;
+  font-size: 12px;
+}
+
 .btn--medium {
   padding: 8px 20px;
   font-size: 17px;
