@@ -1,0 +1,11 @@
+.archives {
+  display: flex;
+  flex-wrap: wrap;
+  &-title {
+    text-align: center;
+  }
+
+  &-article {
+    flex-basis: 50%;
+  }
+}

@@ -1,18 +1,17 @@
-import "./Article.css";
 import Button from "./Button.js";
+import "./Article.scss";
 
-function Article() {
+function Article({ className, title, date, text }) {
   return (
-    <div className="article">
-      <div>
-        <p className="article-title">Title</p>
-        <p className="article-date">Date</p>
-        <p className="article-text">Some text....</p>
+    <div className={`article${className ? " " + className : ""}`}>
+      {/*Daca avem className returneaza spatiu+className, altfel nimic*/}
+      <h2 className="article-title">{title}</h2>
+      <p className="article-date">{date}</p>
+      <p className="article-text">{text}</p>
 
-        <Button buttonStyle="btn--article btn-small" className="signupButton">
-          Read more
-        </Button>
-      </div>
+      <Button buttonStyle="btn--article btn-small" className="article-button">
+        Read more
+      </Button>
     </div>
   );
 }
